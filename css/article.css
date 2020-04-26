@@ -1,0 +1,406 @@
+
+/*博客样式*/
+.post {
+  width: 100%;
+  max-width: 100%;
+  min-height: 300px;
+  max-height: 400px;
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  min-height: 11rem;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  overflow: hidden;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.15);
+          box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.15);
+}
+
+.post:hover {
+  -webkit-transform: translate(0px, -2px);
+      -ms-transform: translate(0px, -2px);
+          transform: translate(0px, -2px);
+  -webkit-box-shadow: 0 15px 45px -10px rgba(10, 16, 34, 0.2);
+          box-shadow: 0 15px 45px -10px rgba(10, 16, 34, 0.2);
+}
+
+.post .post-thumbnail {
+  width: 30%;
+  max-width: 100%;
+  min-height: 15rem;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: 50% 50%;
+}
+
+.post .post-content {
+  padding: 1rem;
+  width: 70%;
+  font-size: 16px;
+}
+
+.post .post-content .post-date,
+.post .post-content .post-views,
+.post .post-content .post-like
+ {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.post .post-content .post-other{
+	margin-bottom: 10px;
+}
+
+.post .post-content .post-title {
+  margin: 0 0 10px;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.post .post-content .post-title a {
+  font-family: 'PT Serif', serif;
+  text-decoration: none;
+  color: #263959;
+}
+
+.post .post-content p {
+  margin-top: 0;
+}
+/*侧边栏样式*/
+
+/* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
+.sidebar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+          
+  position: fixed;
+  /*top: 80px;*/
+  /*left: 0;*/
+  
+  bottom: 0;
+  width: 250px;
+  height: 80%;
+  margin-right: 10px;
+  padding: 20px 10px;
+  background-color: #ffffff;
+}
+
+.about {
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.about .cover-author-image {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 10px;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  overflow: hidden;
+  background-color: #333030;
+}
+
+.about img {
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: -webkit-transform 0.35s;
+  -o-transition: transform 0.35s;
+  transition: transform 0.35s;
+  transition: transform 0.35s, -webkit-transform 0.35s;
+}
+
+.about img:hover {
+  -webkit-transform: scale3d(0.9, 0.9, 1);
+          transform: scale3d(0.9, 0.9, 1);
+}
+
+.about .author-name {
+  font-family: 'Microsoft Yahei', serif;
+  margin: 0 0 10px;
+  position: relative;
+  padding-bottom: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #333030;
+  font-weight: 700;
+}
+
+.about .author-name::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  display: block;
+  width: 7px;
+  height: 7px;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  background-color: #515151;
+}
+
+.about p {
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+
+.contact .contact-title {
+  position: relative;
+  color: #333030;
+  font-weight: 400;
+  font-size: 12px;
+  margin: 0 0 5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contact .contact-title::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: -webkit-calc(50% - 48px);
+  width: calc(50% - 48px);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: #515151;
+}
+
+.contact .contact-title::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: -webkit-calc(50% - 48px);
+  width: calc(50% - 48px);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  background-color: #515151;
+}
+
+.contact ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.contact ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.contact ul li:first-child {
+  margin-left: 0;
+}
+
+.contact ul li a {
+  color: #515151;
+  display: block;
+  padding: 5px;
+  font-size: 18px;
+  -webkit-transition: all 350ms cubic-bezier(0.13, 0.43, 0.54, 1.82);
+  -o-transition: all 350ms cubic-bezier(0.13, 0.43, 0.54, 1.82);
+  transition: all 350ms cubic-bezier(0.13, 0.43, 0.54, 1.82);
+}
+
+.contact ul li a:hover {
+  color: #333030;
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.foot .copyright {
+  font-size: 14px;
+  text-align: center;
+  /*margin-bottom: 20px;*/
+  
+  /*color: #FFFFFF !important;*/
+}
+
+
+
+/* - - - - - - - - - - Media Styles - - - - - - - - - - */
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+	.sidebar {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.15);
+            box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.15);
+  }
+  .sidebar footer {
+    margin-bottom: 10px;
+  }
+  .about {
+    text-align: center;
+    max-width: 480px;
+    margin: 10px auto auto;
+  }
+  .about img {
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 100%;
+            border-radius: 100%;
+    margin-bottom: 10px;
+  }
+  
+  
+  
+  
+  
+  /*文章列表*/
+  .post {
+    width: 48%;
+    max-width: 100%;
+    margin: 0 0.9% 1.5%;
+    float: left;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .post .post-thumbnail {
+    width: 100%;
+  }
+  .post .post-content {
+    width: 100%;
+  }
+  .post .post-content .post-title {
+    margin: 0 0 5px;
+  }
+  .post .post-content .post-title a {
+    font-size: 21px;
+  }
+  
+  .content-box {
+    padding: 20px 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  
+
+.Pagelinks h2 a:link{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .2s;
+} 
+.Pagelinks h2 a:visited{ /*浏览过的*/
+  color:darkgrey;
+}
+.Pagelinks h2 a:active{  /*激活过的*/
+  color:darkgrey;
+}
+
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .post {
+    width: 98%;
+    max-width: 100%;
+    margin: 2%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .post .post-thumbnail {
+    width: 100%;
+  }
+  .post .post-content {
+    width: 100%;
+  }
+  .post .post-content .post-title {
+    margin: 0 0 5px;
+  }
+  .post .post-content .post-title a {
+    font-size: 21px;
+  }
+
+}
+
+.content-box {
+  padding: 20px;
+  padding-right: 260px;
+}
+
+
+.content-box {
+    padding: 10px;
+}
